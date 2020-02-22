@@ -1,5 +1,5 @@
 #pragma once
-#include "nodeObj.h"
+#include "nodeOBJ.h"
 
 #ifndef LINKEDLIST
 #define LINKEDLIST
@@ -10,6 +10,10 @@ class linkedList
 public:
     node<T>* head;
      long double size = 0;
+     long double foundComp = 0;
+     long double notFoundComp =0;
+     int compares = 0;
+     bool condition = false;
     void insert(T item) {
 
         node<T>* temp = new node<T>(item);
@@ -26,20 +30,27 @@ public:
             size--;
         }
     }
-    bool find(T item)
+        bool find(T item)
     {
         for (node<T>* temp = head; temp != nullptr; temp = temp->next)
         {
+	  compares++;
             if (((temp->data).compare(item)) == 0)
             {
-                return true;
+		    foundComp = compares;
+		    compares = 0;
+		    condition = true;
+		    return condition;
             }
             else if (temp->next == nullptr)
             {
-                return false;
+		    notFoundComp = compares;
+		    compares = 0;
+		    condition = false;
+                return condition;
             }
         }
-        return false;
+	return condition;
     }
     int getSize()
     {

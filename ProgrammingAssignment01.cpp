@@ -81,9 +81,13 @@ vector<string> readDict()
 
 int main()
 {
-	int correctlySpelled = 0;
-	int wrongSpelling = 0;
+	float correctlySpelled = 0.0;
+	float wrongSpelling =0.0;
 	int skipped = 0;
+	float foundAvg = 0.0;
+	float notFoundAvg = 0.0;
+	ofstream outfile;
+	outfile.open("misspelled.txt");
 
 	Timer timer;
 	vector<string> call;
@@ -115,38 +119,57 @@ int main()
 		while (!infile.eof())
 		{
 			cleanWord(bookword);
-			if (bookword == "'")
+			if(bookword.compare("") == 0)
+			{
+
+			}
+			else  if (!(isalpha(bookword[0])))
 			{
 				skipped++;
 			}
-			else if (!(isalpha(bookword[0])))
-			{
-				skipped++;
-			}
-		    if (dict.find(bookword))
+		    else if (dict.find(bookword))
 			{
 				correctlySpelled++;
 			}
 			else
 			{
+				outfile << bookword;
+				outfile << "\n";
 				wrongSpelling++;
 			}
 			infile >> bookword;
 		}
 		timer.Stop();
 	}
+	outfile.close();
+	foundAvg = ((correctlySpelled)/(dict.foundComp));
+	notFoundAvg = ((wrongSpelling)/(dict.notFoundComp));
 	infile.close();
-	cout << "Number of Correctly spelled words: ";
+	cout<< "Done Checking and these are the results";
+	cout<< "\n";
+	cout<< "finished in time: ";
+	cout<< timer.Time();
+	cout<< "\n";
+	cout << "There are ";
 	cout << correctlySpelled;
+	cout<< "words found in the dictionary";
 	cout << "\n";
-	cout << "Number of wrongly spelled words: ";
+	cout<< dict.foundComp;
+	cout<< "Compares. Average: ";
+	cout<< foundAvg;
+	cout<<"\n";
+	cout << "There are ";
 	cout << wrongSpelling;
+	cout << "words NOT found in the dictionary";
 	cout << "\n";
-	cout << "Number of skipped words: ";
+	cout << dict.notFoundComp;
+	cout << "compares. Average: ";
+	cout << notFoundAvg;
+	cout << "\n";
+	cout << "There are ";
 	cout << skipped;
+	cout << "words not checked.";
 	cout << "\n";
-	cout << "time it took to run: ";
-	cout << timer.Time();
 	
 
 	system("pause");
