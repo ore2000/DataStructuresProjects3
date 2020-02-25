@@ -1,7 +1,7 @@
 //Programming assigment 1
 //Name: Oreoluwa A. BAbatunde
 //COSC2030 Spring 2020
-// Date LAst Modified 2/17/2020
+// Date LAst Modified 2/25/2020
 
 #include<vector>
 #include<string>
@@ -13,7 +13,7 @@
 #include "timer.h"
 using namespace std;
 
-
+//function used to remove non alphabets and apostrophes.
 void cleanWord(string& word)
 {
 	int len = word.size();
@@ -47,7 +47,7 @@ void cleanWord(string& word)
 }
 
 
-
+//function used to read from the dictionary,store it in a vector and sort it alphabetically.
 vector<string> readDict()
 {
 	ifstream infile;
@@ -71,13 +71,7 @@ vector<string> readDict()
 	return words;
 }
 
-void printInfo(int dictSize, float spellCheckTime, int NumberOfWowrdsSpelledCorrectly, float avgCOmp, int wordsNotFound, int AvgWordsNotFound, int wordsNotChecked)
-{
-	cout << " Time to spell check: ";
-	cout << spellCheckTime;
-	cout << "\n";
 
-}
 
 int main()
 {
@@ -91,6 +85,7 @@ int main()
 
 	Timer timer;
 	vector<string> call;
+	vector<string> missPelled;
 	string word;
 	linkedList<string> dict;
 
@@ -133,13 +128,17 @@ int main()
 			}
 			else
 			{
-				outfile << bookword;
-				outfile << "\n";
+				missPelled.push_back(bookword);
 				wrongSpelling++;
 			}
 			infile >> bookword;
 		}
 		timer.Stop();
+	}
+	for(string w: missPelled)
+	{
+		outfile<<w;
+		outfile << "\n";
 	}
 	outfile.close();
 	foundAvg = ((correctlySpelled) / (dict.foundComp));
@@ -171,7 +170,5 @@ int main()
 	cout << " words not checked.";
 	cout << "\n";
 
-
-	system("pause");
 	return 0;
 }
