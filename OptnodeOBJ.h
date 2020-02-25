@@ -21,7 +21,7 @@ public:
     }
     ~node()
     {
-//        delete next;
+        delete next;
     }
 };
 #endif // !node
