@@ -21,6 +21,7 @@ public:
     }
     ~node()
     {
+        delete data;
         delete next;
     }
 };
