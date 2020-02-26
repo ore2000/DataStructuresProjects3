@@ -21,8 +21,7 @@ public:
     }
     ~node()
     {
-        delete data;
-        delete next;
+	    if(next != nullptr) delete next;
     }
 };
 #endif // !node

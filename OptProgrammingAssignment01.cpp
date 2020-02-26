@@ -141,8 +141,8 @@ int main()
 		outfile << "\n";
 	}
 	outfile.close();
-	foundAvg = ((correctlySpelled) / (dict.foundComp));
-	notFoundAvg = ((wrongSpelling) / (dict.notFoundComp));
+	foundAvg = ( (dict.foundComp)/(correctlySpelled));
+	notFoundAvg = ( (dict.notFoundComp)/(wrongSpelling));
 	infile.close();
 	cout << "Done Checking and these are the results";
 	cout << "\n";
@@ -153,6 +153,7 @@ int main()
 	cout << correctlySpelled;
 	cout << " words found in the dictionary";
 	cout << "\n";
+	cout<< "\t";
 	cout << dict.foundComp;
 	cout << " Compares. Average: ";
 	cout << foundAvg;
@@ -161,6 +162,7 @@ int main()
 	cout << wrongSpelling;
 	cout << " words NOT found in the dictionary";
 	cout << "\n";
+	cout<< "\t";
 	cout << dict.notFoundComp;
 	cout << " compares. Average: ";
 	cout << notFoundAvg;

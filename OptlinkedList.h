@@ -8,35 +8,36 @@ template<class T>
 class linkedList
 {
 public:
-    node<T>* heada= nullptr;
-    node<T>* headb=nullptr;
-    node<T>* headc=nullptr;
-    node<T>* headd=nullptr;
-    node<T>* heade= nullptr;
-    node<T>* headf=nullptr;
-    node<T>* headg=nullptr;
-    node<T>* headh=nullptr;
-    node<T>* headi=nullptr;
-    node<T>* headj=nullptr;
-    node<T>* headk=nullptr;
-    node<T>* headl=nullptr;
-    node<T>* headm=nullptr;
-    node<T>* headn=nullptr;
-    node<T>* heado=nullptr;
-    node<T>* headp=nullptr;
-    node<T>* headq=nullptr;
-    node<T>* headr=nullptr;
-    node<T>* heads=nullptr;
-    node<T>* headt=nullptr;
-    node<T>* headu=nullptr;
-    node<T>* headv=nullptr;
-    node<T>* headw=nullptr;
-    node<T>* headx=nullptr;
-    node<T>* heady=nullptr;
-    node<T>* headz=nullptr;
-    node<T>* headMal=nullptr;
 
-    node<T>* headPointers[27] = { heada,headb,headc,headd,heade,headf,headg,headh,headi,headj,headk,headl,headm,headn,heado,headp,headq,headr,heads,headt,headu,headv,headw,headx,heady,headz,headMal};
+    node<T>* heada;
+    node<T>* headb;
+    node<T>* headc;
+    node<T>* headd;
+    node<T>* heade;
+    node<T>* headf;
+    node<T>* headg;
+    node<T>* headh;
+    node<T>* headi;
+    node<T>* headj;
+    node<T>* headk;
+    node<T>* headl;
+    node<T>* headm;
+    node<T>* headn;
+    node<T>* heado;
+    node<T>* headp;
+    node<T>* headq;
+    node<T>* headr;
+    node<T>* heads;
+    node<T>* headt;
+    node<T>* headu;
+    node<T>* headv;
+    node<T>* headw;
+    node<T>* headx;
+    node<T>* heady;
+    node<T>* headz;
+    node<T>* headMal;
+
+  
     long double size = 0;
     long double foundComp = 0;
     long double notFoundComp = 0;
@@ -44,11 +45,35 @@ public:
     bool condition = false;
     linkedList()
     {
-	    for(int i =0; i <27; i++)
-	    {
-		    headPointers[i] = nullptr;
-	
-	    }
+     heada= nullptr;
+     headb=nullptr;
+     headc=nullptr;
+     headd=nullptr;
+     heade= nullptr;
+     headf=nullptr;
+     headg=nullptr;
+     headh=nullptr;
+     headi=nullptr;
+     headj=nullptr;
+     headk=nullptr;
+     headl=nullptr;
+     headm=nullptr;
+     headn=nullptr;
+     heado=nullptr;
+     headp=nullptr;
+     headq=nullptr;
+     headr=nullptr;
+     heads=nullptr;
+     headt=nullptr;
+     headu=nullptr;
+     headv=nullptr;
+     headw=nullptr;
+     headx=nullptr;
+     heady=nullptr;
+     headz=nullptr;
+     headMal=nullptr;
+     
+
     }
 	void insert(T item)
 	{
@@ -495,324 +520,16 @@ public:
 		}
 		}
     }
-/*
-    bool find(T item)
-    {
-		if (item[0] == 'a')
-		{
-			for (node<T>* temp = heada; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-				else
-				{
-					condition = condition;
-				}
-			}
-		}
-		else if (item[0] == 'b')
-		{
-			for (node<T>* temp = headb; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				} else
-                                {
-                                        condition = condition;
-                                }
-
-			}
-		}
-		else if (item[0] == 'c')
-		{
-			for (node<T>* temp = headc; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-				 else
-                                {
-                                        condition = condition;
-                                }
-
-			}
-		}
-		else if (item[0] == 'd')
-		{
-			for (node<T>* temp = headd; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-				 else
-                                {
-                                        condition = condition;
-                                }
-
-			}
-		}
-		else if (item[0] == 'e')
-		{
-			for (node<T>* temp = heade; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'f')
-		{
-			for (node<T>* temp = headf; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'g')
-		{
-			for (node<T>* temp = headg; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'h')
-		{
-			for (node<T>* temp = headh; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'i')
-		{
-			for (node<T>* temp = headi; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'j')
-		{
-			for (node<T>* temp = headj; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'k')
-		{
-			for (node<T>* temp = headk; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'l')
-		{
-			for (node<T>* temp = headl; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'm')
-		{
-			for (node<T>* temp = headm; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
-					condition = false;
-					return condition;
-				}
-			}
-		}
-		else if (item[0] == 'n')
-		{
-			for (node<T>* temp = headn; temp != nullptr; temp = temp->next)
-			{
-				compares++;
-				if (((temp->data).compare(item)) == 0)
-				{
-					foundComp = compares;
-					compares = 0;
-					condition = true;
-					return condition;
-				}
-				else if (temp->next == nullptr)
-				{
-					notFoundComp = compares;
-					compares = 0;
+ 
 				
-	*/
     bool find(T item)
     {
 		if (item[0] == 'a')
 		{
 			for (node<T>* temp = heada; temp != nullptr; temp = temp->next)
 			{
+				if(item.size() == (temp->data).size())
+				{
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -824,6 +541,10 @@ public:
 				else
 				{
 					condition = condition;
+				}
+				}
+				else
+				{
 				}
 
 			}
@@ -834,8 +555,11 @@ public:
 		}
 		else if (item[0] == 'b')
 		{
+			 
 			for (node<T>* temp = headb; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -847,6 +571,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -859,6 +584,8 @@ public:
 		{
 			for (node<T>* temp = headc; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -870,6 +597,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -882,6 +610,8 @@ public:
 		{
 			for (node<T>* temp = headd; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -893,6 +623,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -905,6 +636,8 @@ public:
 		{
 			for (node<T>* temp = heade; temp != nullptr; temp = temp->next)
 			{  	
+			       	if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -917,6 +650,7 @@ public:
 				{
 					condition = condition;
 				}
+			}
 			    }
 
 			notFoundComp = compares;
@@ -928,6 +662,8 @@ public:
 		{
 			for (node<T>* temp = headf; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -939,6 +675,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -951,6 +688,8 @@ public:
 		{
 			for (node<T>* temp = headg; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -962,6 +701,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -974,6 +714,8 @@ public:
 		{
 			for (node<T>* temp = headh; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -985,6 +727,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -997,6 +740,8 @@ public:
 		{
 			for (node<T>* temp = headi; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1008,6 +753,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1020,6 +766,8 @@ public:
 		{
 			for (node<T>* temp = headj; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1031,6 +779,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1043,6 +792,8 @@ public:
 		{
 			for (node<T>* temp = headk; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1054,6 +805,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1066,6 +818,8 @@ public:
 		{
 			for (node<T>* temp = headl; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1077,6 +831,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1089,6 +844,8 @@ public:
 		{
 			for (node<T>* temp = headm; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1100,6 +857,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 				
 			}
@@ -1112,6 +870,8 @@ public:
 		{
 			for (node<T>* temp = headn; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1123,6 +883,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1135,6 +896,8 @@ public:
 		{
 			for (node<T>* temp = heado; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1146,6 +909,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1158,6 +922,8 @@ public:
 		{
 			for (node<T>* temp = headp; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1169,6 +935,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1181,6 +948,8 @@ public:
 		{
 			for (node<T>* temp = headq; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1192,6 +961,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1204,6 +974,8 @@ public:
 		{
 			for (node<T>* temp = headr; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1215,6 +987,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1227,6 +1000,8 @@ public:
 		{
 			for (node<T>* temp = heads; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1238,6 +1013,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1250,6 +1026,8 @@ public:
 		{
 			for (node<T>* temp = headt; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1261,6 +1039,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1273,6 +1052,8 @@ public:
 		{
 			for (node<T>* temp = headu; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1284,6 +1065,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1296,6 +1078,8 @@ public:
 		{
 			for (node<T>* temp = headv; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1307,6 +1091,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1319,6 +1104,8 @@ public:
 		{
 			for (node<T>* temp = headw; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1330,6 +1117,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1342,6 +1130,8 @@ public:
 		{
 			for (node<T>* temp = headx; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1353,6 +1143,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1365,6 +1156,8 @@ public:
 		{
 			for (node<T>* temp = heady; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1376,6 +1169,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1388,6 +1182,8 @@ public:
 		{
 			for (node<T>* temp = headz; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1399,6 +1195,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1411,6 +1208,8 @@ public:
 		{
 			for (node<T>* temp = headMal; temp != nullptr; temp = temp->next)
 			{
+				 if(item.size() == (temp->data).size())
+                                {
 				compares++;
 				if (((temp->data).compare(item)) == 0)
 				{
@@ -1422,6 +1221,7 @@ public:
 				else
 				{
 					condition = condition;
+				}
 				}
 
 			}
@@ -1436,26 +1236,117 @@ public:
  {
    return size;
  }
- /*void print()
+ 
+ ~linkedList()
  {
-    for(int i = 0; i<26;i++)
-     {
-         for (node<T>* temp = headPointers[24]; temp != nullptr; temp = temp->next)
+ if(heada != nullptr)
+	 {
+   	 delete  heada;
+	 }
+ if(headb != nullptr)
          {
-             cout << temp->data;
-             if (temp->next != nullptr)
-             {
-                 cout << "->";
-             }
-             else
-             {
-                 cout << "null \n";
-             }
+         delete  headb;
          }
-         i = i+1;
-     }
-     
+ if(headc != nullptr)
+         {
+         delete  headc;
+         }
+ if(headd != nullptr)
+         {
+         delete  headd;
+         }
+ if(heade != nullptr)
+         {
+         delete  heade;
+         }
+ if(headf != nullptr)
+         {
+         delete  headf;
+         }
+ if(headg != nullptr)
+         {
+         delete  headg;
+         }
+ if(headh != nullptr)
+         {
+         delete  headh;
+         }
+ if(headi != nullptr)
+         {
+         delete  headi;
+         }
+ if(headj != nullptr)
+         {
+         delete  headj;
+         }
+ if(headk != nullptr)
+         {
+         delete  headk;
+         }
+ if(headl != nullptr)
+         {
+         delete  headl;
+         }
+ if(headm != nullptr)
+         {
+         delete  headm;
+         }
+ if(headn != nullptr)
+         {
+         delete  headn;
+         }
+ if(heado != nullptr)
+         {
+         delete  heado;
+         }
+ if(headp != nullptr)
+         {
+         delete  headp;
+         }
+ if(headq != nullptr)
+         {
+         delete  headq;
+         }
+ if(headr != nullptr)
+         {
+         delete  headr;
+         }
+ if(heads != nullptr)
+         {
+         delete  heads;
+         }
+ if(headt != nullptr)
+         {
+         delete  headt;
+         }
+ if(headu != nullptr)
+         {
+         delete  headu;
+         }
+ if(headv != nullptr)
+         {
+         delete  headv;
+         }
+ if(headw != nullptr)
+         {
+         delete  headw;
+         }
+ if(headx != nullptr)
+         {
+         delete  headx;
+         }
+ if(heady != nullptr)
+         {
+         delete  heady;
+         }
+ if(headz != nullptr)
+         {
+         delete  headz;
+         }
+ if(headMal != nullptr)
+         {
+         delete  headMal;
+        }
  }
- */
 };
 #endif // !linkedList
